@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strindheim G2015 - Sommertrening</title>
+  <link rel="icon" type="image/svg+xml" href="strindheim-logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="brandHeader">
+        <img src="strindheim-logo.png" alt="Strindheim IL" class="clubLogo" />
+        <div>
+          <h1>Sommertrening G2015</h1>
+          <p>Strindheim IL · Velg minst 3 øvelser per uke for å fullføre.</p>
+        </div>
+      </div>
+      <button id="logoutBtn" class="ghost hidden">Logg ut</button>
+    </header>
+
+    <main>
+
+      
+<section id="startScreen" class="card startMission">
+<h2>⚽ STRINDHEIM G2015</h2>
+<h3>SOMMEROPPDRAG 2025</h3>
+
+<div class="missionBox">
+<p style="font-size:24px;font-weight:800;">🕵️ DU HAR BLITT INVITERT</p>
+
+<p>til Strindheim G2015 sitt sommeroppdrag.</p>
+
+<hr>
+
+<p><strong>🎯 Oppdrag</strong></p>
+<h2>300 ØVELSER</h2>
+
+<p>før første trening etter ferien.</p>
+
+<hr>
+
+<p><strong>🎁 Belønning</strong></p>
+<h2>HEMMELIG</h2>
+
+<hr>
+
+<p class="missionQuestion">❓ Klarer laget oppdraget?</p>
+</div>
+
+<button id="playerModeBtn">🚀 BLI MED</button>
+<button id="publicStatsBtn" class="secondary">📊 Statistikk</button>
+<button id="trainerModeBtn" class="secondary">🔒 Trener</button>
+</section>
+
+
+
+      <section id="loginScreen" class="card hidden">
+        <button id="backToStartBtn" class="ghost">← Tilbake</button>
+        <h2>Spillerinnlogging</h2>
+        <p class="muted">Velg spiller og skriv PIN-kode.</p>
+        <label>Spiller</label>
+        <select id="playerSelect"></select>
+        <label>PIN</label>
+        <input id="pinInput" type="password" inputmode="numeric" maxlength="4" placeholder="4 siffer" />
+        <button id="loginBtn">Start</button>
+        <p id="loginError" class="error"></p>
+      </section>
+
+      <section id="trainerLoginScreen" class="card hidden">
+        <button id="backToStartTrainerBtn" class="ghost">← Tilbake</button>
+        <h2>Trenerinnlogging</h2>
+        <p class="muted">Skriv trener-PIN for å se oversikt.</p>
+        <label>Trener-PIN</label>
+        <input id="trainerPinInput" type="password" inputmode="numeric" maxlength="4" placeholder="4 siffer" />
+        <button id="trainerLoginBtn">Åpne statistikk</button>
+        <p id="trainerLoginError" class="error"></p>
+      </section>
+
+      <section id="homeScreen" class="hidden">
+        <div class="card welcome">
+          <h2 id="welcomeText"></h2>
+          <p id="teamStatus" class="teamStatus"></p>
+          <p id="syncStatus" class="muted"></p>
+        </div>
+        <div id="weeksGrid" class="weeks-grid"></div>
+      </section>
+
+      <section id="weekScreen" class="hidden">
+        <button id="backBtn" class="ghost">← Tilbake</button>
+        <div class="card">
+          <h2 id="weekTitle"></h2>
+          <p id="weekDate" class="dateBadge"></p>
+          <p id="weekHelp" class="muted"></p>
+          <div class="progressWrap"><div id="progressBar" class="progressBar"></div></div>
+          <p id="progressText" class="progressText"></p>
+          <div id="tasksList" class="tasks"></div>
+          <div id="completedBox" class="completedBox hidden">🎉 Uka er fullført!</div>
+        </div>
+      </section>
+
+
+      <section id="statsScreen" class="hidden">
+        <button id="statsBackBtn" class="ghost">← Tilbake</button>
+        <div class="card statsHero">
+          <h2>📊 Statistikk</h2>
+          <p class="muted">Ren oversikt over lagets sommeroppdrag.</p>
+        </div>
+        <div id="publicStatsSummary" class="card"></div>
+        <div id="publicWeekStats" class="card"></div>
+        <div id="publicMedalStats" class="card"></div>
+      </section>
+
+      <section id="trainerScreen" class="hidden">
+        <button id="trainerBackBtn" class="ghost">← Tilbake</button>
+        <div class="card">
+          <h2>📊 Trenerstatistikk</h2>
+          <p id="activeWeekInfo" class="teamStatus"></p>
+          <div class="openWeeksBox">
+            <h3>🔓 Åpne uker for spillerne</h3>
+            <p class="muted">Huk av ukene spillerne skal kunne registrere. Datoene vises fortsatt i appen.</p>
+            <div id="openWeeksControl" class="openWeeksList"></div>
+            <button id="saveOpenWeeksBtn">Lagre åpne uker</button>
+            <p id="overrideStatus" class="muted"></p>
+          </div>
+          <p id="trainerSyncStatus" class="muted"></p>
+          <button id="refreshStatsBtn">Oppdater statistikk</button>
+        </div>
+        <div id="statsSummary" class="card"></div>
+        <div id="weekStats" class="card"></div>
+        <div id="playerStats" class="card"></div>
+        <div id="notStartedStats" class="card"></div>
+      </section>
+    </main>
+  </div>
+
+  <iframe name="hiddenSubmitFrame" id="hiddenSubmitFrame" class="hidden"></iframe>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+:root{--bg:#fff7f1;--card:#ffffff;--text:#171717;--muted:#6f625b;--brand:#f36f21;--brand2:#111111;--border:#ead8cd;--ok:#fff0e6;--warn:#fff7df;--utleira-orange:#f36f21;--utleira-black:#111111;--utleira-cream:#fff7f1}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}.app{max-width:760px;margin:0 auto;min-height:100vh;padding:14px}header{background:linear-gradient(135deg,#111111 0%,#2a1a12 46%,#f36f21 100%);color:#fff;border-radius:22px;padding:18px;margin-bottom:14px;display:flex;gap:12px;justify-content:space-between;align-items:center;border:2px solid #111111;box-shadow:0 10px 26px rgba(17,17,17,.18)}h1{font-size:24px;margin:0 0 6px}h2{margin:0 0 10px;font-size:22px}p{line-height:1.4}header p{margin:0;opacity:.9}.card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:18px;margin-bottom:14px;box-shadow:0 8px 20px rgba(0,0,0,.05)}label{display:block;font-weight:700;margin:14px 0 6px}select,input{width:100%;font-size:18px;padding:14px;border:1px solid var(--border);border-radius:14px;background:#fff}button{width:100%;border:0;border-radius:16px;background:var(--brand);color:#fff;font-size:18px;font-weight:800;padding:15px;margin-top:16px;cursor:pointer;box-shadow:0 6px 14px rgba(243,111,33,.24)}.ghost{width:auto;background:#fff;color:var(--brand2);border:1px solid var(--border);padding:10px 13px;margin:0}.hidden{display:none!important}.muted{color:var(--muted);margin-top:0}.error{color:#b00020;font-weight:700}.welcome{background:#f7fff9}.teamStatus{font-weight:700;color:var(--brand2);margin-bottom:0}.weeks-grid{display:grid;grid-template-columns:1fr;gap:12px}.weekBtn{background:#fff;color:var(--text);border:1px solid var(--border);text-align:left;padding:16px;border-radius:18px;margin:0;box-shadow:0 4px 12px rgba(0,0,0,.04)}.weekBtn .title{font-size:19px;font-weight:800;display:flex;justify-content:space-between;gap:10px}.weekBtn .subtitle{display:block;margin-top:5px;color:var(--muted);font-size:15px}.weekBtn.done{background:var(--ok);border-color:#9bd9b2}.weekBtn.active{outline:3px solid rgba(22,122,61,.18)}.progressWrap{height:16px;background:#e8eee9;border-radius:999px;overflow:hidden;margin:12px 0}.progressBar{height:100%;width:0%;background:var(--brand);transition:width .2s}.progressText{font-weight:800;color:var(--brand2)}.tasks{display:grid;gap:10px;margin-top:14px}.task{display:flex;align-items:flex-start;gap:12px;background:#f8faf8;border:1px solid var(--border);border-radius:16px;padding:14px;font-size:17px}.task input{width:24px;height:24px;flex:0 0 auto;margin:0}.task span{line-height:1.3}.completedBox{background:var(--ok);border:1px solid #9bd9b2;border-radius:16px;padding:16px;margin-top:16px;text-align:center;font-weight:900;font-size:20px}@media(min-width:650px){.weeks-grid{grid-template-columns:1fr 1fr}}
+
+.taskCard{
+  background:#fff;
+  border:1px solid #e6edf5;
+  border-radius:16px;
+  padding:12px;
+  margin:10px 0;
+  box-shadow:0 4px 12px rgba(0,0,0,.04);
+}
+.taskCard.checked{
+  border-color:#27ae60;
+  background:#f1fff6;
+}
+.taskHeader{
+  align-items:flex-start;
+}
+.taskHeader small{
+  color:#516173;
+  line-height:1.35;
+}
+.smallBtn{
+  margin-top:8px;
+  width:auto;
+  padding:8px 12px;
+  border-radius:10px;
+  border:1px solid #d4dde8;
+  background:#f8fafc;
+  color:#24364b;
+  font-weight:700;
+}
+.taskDetails{
+  margin-top:10px;
+  padding:12px;
+  border-radius:12px;
+  background:#eef5ff;
+  color:#223044;
+  line-height:1.45;
+}
+.secondary{background:#eef4ff;color:#16315c;border:1px solid #c9d9ff;margin-top:10px}.statsTable{width:100%;border-collapse:collapse;margin-top:10px}.statsTable th,.statsTable td{border-bottom:1px solid #e7eaf0;padding:10px;text-align:left;font-size:14px}.statsTable th{color:#526070}.pill{display:inline-block;padding:4px 9px;border-radius:999px;background:#eef4ff;font-size:12px}.warning{background:#fff6df;border:1px solid #ffe2a1;padding:10px;border-radius:12px}.ok{color:#0b7a3b;font-weight:700}.danger{color:#b42318;font-weight:700}.smallText{font-size:13px;color:#667085}.taskCard button.doneButton{margin-top:8px}.taskCard.checked .doneButton{background:#1f9d55}.configBox{background:#fff6df;border:1px solid #ffe2a1;border-radius:12px;padding:10px;margin-top:10px}
+
+.weekBtn.active {
+  border: 2px solid #20a464;
+  transform: scale(1.01);
+}
+.statusGrid {
+  display: grid;
+  gap: 10px;
+}
+.weekStatus {
+  background: #ffffff;
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  padding: 12px;
+  display: grid;
+  gap: 4px;
+}
+.weekStatus.done {
+  background: #eefbf4;
+  border-color: #9ee1bb;
+}
+.weekStatus.locked {
+  background: #f5f6f8;
+  color: #737b8c;
+}
+.weekStatus span {
+  font-weight: 800;
+}
+.weekStatus small {
+  color: #667085;
+}
+.dateLine{display:block;margin-top:5px;font-weight:700;color:#0f5d33;font-size:15px}.dateBadge{display:inline-block;background:#e8f7ee;color:#0f5d33;border:1px solid #9bd9b2;border-radius:999px;padding:7px 12px;font-weight:800;margin:0 0 10px}.weekStatus small:first-of-type{font-weight:700;color:#384455}.activeRow{background:#eaf8ef}.activeRow td:first-child{font-weight:900;color:#0f6b3a}.weekStatus.locked strong{color:#667085}.weekStatus.locked small:last-child{color:#a15c00}.weekBtn.active{background:#eefbf4;border-color:#20a464}
+
+.secretCard{
+  background: linear-gradient(135deg,#fffdf2,#fff7d6);
+  border-color:#f4d56a;
+}
+.secretCard h3{margin-top:0}
+.secretCard.goalReached{
+  background: linear-gradient(135deg,#ecfff3,#fff8d8);
+  border-color:#55c982;
+}
+.secretCard.goalReached p{font-weight:700}
+
+.openWeeksBox{background:#f8fbff;border:1px solid #d7e4ff;border-radius:16px;padding:14px;margin-top:14px}.openWeeksBox h3{margin:0 0 6px}.openWeeksList{display:grid;gap:8px;margin-top:12px}.openWeekItem{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid #e4e7ec;border-radius:14px;padding:12px;margin:0;font-weight:400}.openWeekItem input{width:24px;height:24px;margin:2px 0 0;flex:0 0 auto}.openWeekItem span{display:grid;gap:3px}.openWeekItem small{color:#667085}.openWeekItem.activeOpenWeek{background:#eefbf4;border-color:#20a464}.openWeekItem.activeOpenWeek strong{color:#0f5d33}
+
+
+/* Utleira profil */
+.brandHeader{display:flex;align-items:center;gap:14px}
+.clubLogo{width:68px;height:68px;object-fit:contain;background:#fff;border-radius:16px;padding:6px;box-shadow:0 6px 18px rgba(0,0,0,.22);flex:0 0 auto}
+header h1{letter-spacing:.2px;text-transform:none}
+.card{border-color:#ead8cd}
+.welcome{background:linear-gradient(135deg,#fff,#fff1e7);border-color:#f7c4a3}
+.teamStatus,.progressText,.dateLine,.activeRow td:first-child,.openWeekItem.activeOpenWeek strong{color:#b94600}
+.progressBar{background:linear-gradient(90deg,#111111,#f36f21)}
+.weekBtn.done,.weekStatus.done,.taskCard.checked,.completedBox{background:#fff1e7;border-color:#f36f21}
+.weekBtn.active,.weekBtn.active{background:#fff1e7;border-color:#f36f21;outline:3px solid rgba(243,111,33,.22)}
+.weekBtn .title{color:#171717}
+.dateBadge{background:#111111;color:#fff;border-color:#111111}
+.ghost{background:#fff;color:#111111;border:1px solid rgba(255,255,255,.5);box-shadow:none}
+.secondary,.smallBtn{background:#111111;color:#fff;border-color:#111111}
+.secretCard{background:linear-gradient(135deg,#fff7f1,#ffe4d1);border-color:#f36f21}
+.secretCard.goalReached{background:linear-gradient(135deg,#fff0e3,#fff7d8);border-color:#f36f21}
+.openWeeksBox{background:#fff7f1;border-color:#f7c4a3}
+.openWeekItem.activeOpenWeek{background:#fff1e7;border-color:#f36f21}
+.pill{background:#111;color:#fff}
+.ok{color:#b94600}
+@media(max-width:520px){.clubLogo{width:58px;height:58px}header{padding:14px}.brandHeader{gap:10px}h1{font-size:21px}}
+
+
+/* Versjon 19 - offisiell Utleira-logo */
+.clubLogo{
+  width:92px;
+  height:82px;
+  object-fit:contain;
+  background:#ffffff;
+  border-radius:14px;
+  padding:4px;
+}
+@media(max-width:520px){
+  .clubLogo{
+    width:78px;
+    height:70px;
+  }
+}
+
+/* Versjon 21 - startsiden beholdt + ren statistikkside */
+.startMission{text-align:center}
+.startMission > h2{font-size:26px;margin-bottom:6px}
+.startMission > h3{color:#f36f21;letter-spacing:1px;margin-top:0;margin-bottom:18px}
+.missionBox{background:linear-gradient(135deg,#111111 0%,#2a1a12 48%,#f36f21 100%);color:#fff;border:2px solid #f36f21;border-radius:22px;padding:22px 18px;margin:18px 0;box-shadow:0 12px 28px rgba(17,17,17,.22)}
+.missionBox h2{font-size:30px;margin:12px 0;color:#fff}
+.missionBox h3{color:#fff;margin-top:0;font-size:22px}
+.missionBox p{font-size:17px;margin:12px 0}
+.missionBox hr{border:none;border-top:1px solid rgba(255,255,255,.35);margin:18px 0}
+.secretStatus{display:inline-block;background:#fff;color:#111;border-radius:999px;padding:10px 14px;font-weight:900;margin-top:14px}
+.missionQuestion{font-weight:900;font-size:19px!important;margin-top:18px!important}
+#playerModeBtn{font-size:19px;padding:18px}
+.statsHero{background:linear-gradient(135deg,#fff,#fff1e7)}
+.bigStat{font-size:24px;margin:8px 0}
+.cleanStatsGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.cleanStatsGrid div{background:#fff7f1;border:1px solid #f7c4a3;border-radius:14px;padding:12px;text-align:center}
+.cleanStatsGrid strong{display:block;font-size:24px;color:#b94600}
+.cleanStatsGrid span{display:block;font-size:12px;color:#6f625b}
+.cleanWeekList{display:grid;gap:10px}
+.cleanWeekRow{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;border:1px solid #ead8cd;border-radius:14px;padding:12px;background:#fff}
+.cleanWeekRow.open{background:#fff1e7;border-color:#f36f21}
+.cleanWeekRow small{display:block;color:#667085;font-size:12px}
+@media(max-width:520px){.cleanStatsGrid{grid-template-columns:1fr 1fr}.cleanWeekRow{grid-template-columns:1fr;gap:6px}}
+
+
+/* Strindheim G2015 profil - nedtonet blå/gul */
+:root{
+  --bg:#f7f4ea;
+  --card:#ffffff;
+  --text:#102241;
+  --muted:#667085;
+  --brand:#f2c94c;
+  --brand2:#123b7a;
+  --border:#e6dcc5;
+  --ok:#eef7ff;
+  --warn:#fff8dd;
+  --strindheim-blue:#123b7a;
+  --strindheim-blue-dark:#0b2856;
+  --strindheim-yellow:#f2c94c;
+  --strindheim-cream:#f7f4ea;
+}
+body{
+  background:linear-gradient(180deg,#eaf0fa 0%,#f7f4ea 35%,#f7f4ea 100%);
+  color:var(--text);
+}
+header{
+  background:linear-gradient(135deg,#0b2856 0%,#123b7a 72%,#f2c94c 100%);
+  border-color:#0b2856;
+  box-shadow:0 10px 26px rgba(18,59,122,.18);
+}
+.clubLogo{
+  width:76px;
+  height:76px;
+  object-fit:contain;
+  background:#ffffff;
+  border-radius:18px;
+  padding:6px;
+}
+button{
+  background:linear-gradient(135deg,#f2c94c,#f6d96f);
+  color:#0b2856;
+  box-shadow:0 6px 14px rgba(18,59,122,.16);
+}
+.secondary,.smallBtn{
+  background:#123b7a;
+  color:#fff;
+  border-color:#123b7a;
+}
+.startMission > h3,
+.startMission h3{
+  color:#123b7a;
+}
+.missionBox{
+  background:linear-gradient(135deg,#0b2856 0%,#123b7a 70%,#315f9f 100%);
+  color:#fff;
+  border-color:#f2c94c;
+}
+.secretStatus{
+  background:#f2c94c;
+  color:#0b2856;
+}
+.progressBar{
+  background:linear-gradient(90deg,#123b7a,#f2c94c);
+}
+.teamStatus,.progressText,.dateLine,.activeRow td:first-child{
+  color:#123b7a;
+}
+.weekBtn.done,.weekStatus.done,.taskCard.checked,.completedBox{
+  background:#eef7ff;
+  border-color:#123b7a;
+}
+.weekBtn.active{
+  background:#eef7ff;
+  border-color:#123b7a;
+  outline:3px solid rgba(18,59,122,.18);
+}
+.dateBadge{
+  background:#123b7a;
+  color:#fff;
+  border-color:#123b7a;
+}
+.secretCard{
+  background:linear-gradient(135deg,#ffffff,#fff7d8);
+  border-color:#f2c94c;
+}
+.openWeeksBox{
+  background:#f8fbff;
+  border-color:#c8d8f2;
+}
+.openWeekItem.activeOpenWeek{
+  background:#eef7ff;
+  border-color:#123b7a;
+}
+.pill{
+  background:#123b7a;
+  color:#fff;
+}
+.ok{
+  color:#123b7a;
+}
+.cleanStatsGrid strong{
+  color:#123b7a;
+}
+.cleanWeekRow.open{
+  background:#eef7ff;
+  border-color:#123b7a;
+}
+@media(max-width:520px){
+  .clubLogo{width:64px;height:64px}
+}
