@@ -149,28 +149,24 @@ header h1{letter-spacing:.2px;text-transform:none}
 @media(max-width:520px){.cleanStatsGrid{grid-template-columns:1fr 1fr}.cleanWeekRow{grid-template-columns:1fr;gap:6px}}
 
 
-/* Strindheim G2015 profil - nedtonet blå/gul */
+/* Strindheim IL G2015 - nedtonet blå/gul profil */
 :root{
-  --bg:#f7f4ea;
+  --bg:#f4f1e8;
   --card:#ffffff;
   --text:#102241;
   --muted:#667085;
-  --brand:#f2c94c;
+  --brand:#f1cc4d;
   --brand2:#123b7a;
   --border:#e6dcc5;
   --ok:#eef7ff;
   --warn:#fff8dd;
-  --strindheim-blue:#123b7a;
-  --strindheim-blue-dark:#0b2856;
-  --strindheim-yellow:#f2c94c;
-  --strindheim-cream:#f7f4ea;
 }
 body{
-  background:linear-gradient(180deg,#eaf0fa 0%,#f7f4ea 35%,#f7f4ea 100%);
+  background:linear-gradient(180deg,#e8eef8 0%,#f4f1e8 38%,#f4f1e8 100%);
   color:var(--text);
 }
 header{
-  background:linear-gradient(135deg,#0b2856 0%,#123b7a 72%,#f2c94c 100%);
+  background:linear-gradient(135deg,#0b2856 0%,#123b7a 72%,#f1cc4d 100%);
   border-color:#0b2856;
   box-shadow:0 10px 26px rgba(18,59,122,.18);
 }
@@ -183,7 +179,7 @@ header{
   padding:6px;
 }
 button{
-  background:linear-gradient(135deg,#f2c94c,#f6d96f);
+  background:linear-gradient(135deg,#f1cc4d,#f7dc75);
   color:#0b2856;
   box-shadow:0 6px 14px rgba(18,59,122,.16);
 }
@@ -192,21 +188,27 @@ button{
   color:#fff;
   border-color:#123b7a;
 }
-.startMission > h3,
-.startMission h3{
-  color:#123b7a;
-}
+.startMission{text-align:center}
+.startMission > h2{font-size:26px;margin-bottom:6px}
+.startMission > h3{color:#123b7a;letter-spacing:1px;margin-top:0;margin-bottom:18px}
 .missionBox{
   background:linear-gradient(135deg,#0b2856 0%,#123b7a 70%,#315f9f 100%);
   color:#fff;
-  border-color:#f2c94c;
+  border:2px solid #f1cc4d;
+  border-radius:22px;
+  padding:22px 18px;
+  margin:18px 0;
+  box-shadow:0 12px 28px rgba(18,59,122,.22);
 }
-.secretStatus{
-  background:#f2c94c;
-  color:#0b2856;
-}
+.missionBox h2{font-size:30px;margin:12px 0;color:#f1cc4d}
+.missionBox h3{color:#fff;margin-top:0;font-size:22px}
+.missionBox p{font-size:17px;margin:12px 0}
+.missionBox hr{border:none;border-top:1px solid rgba(255,255,255,.35);margin:18px 0}
+.inviteLine{font-size:24px!important;font-weight:900}
+.missionQuestion{font-weight:900;font-size:19px!important;margin-top:18px!important}
+#playerModeBtn{font-size:19px;padding:18px}
 .progressBar{
-  background:linear-gradient(90deg,#123b7a,#f2c94c);
+  background:linear-gradient(90deg,#123b7a,#f1cc4d);
 }
 .teamStatus,.progressText,.dateLine,.activeRow td:first-child{
   color:#123b7a;
@@ -227,7 +229,7 @@ button{
 }
 .secretCard{
   background:linear-gradient(135deg,#ffffff,#fff7d8);
-  border-color:#f2c94c;
+  border-color:#f1cc4d;
 }
 .openWeeksBox{
   background:#f8fbff;
@@ -241,12 +243,8 @@ button{
   background:#123b7a;
   color:#fff;
 }
-.ok{
-  color:#123b7a;
-}
-.cleanStatsGrid strong{
-  color:#123b7a;
-}
+.ok{color:#123b7a}
+.cleanStatsGrid strong{color:#123b7a}
 .cleanWeekRow.open{
   background:#eef7ff;
   border-color:#123b7a;

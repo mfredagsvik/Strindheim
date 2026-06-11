@@ -1,9 +1,39 @@
 const players = [
-  {name:'Test Spiller 1', pin:'1001'},
-  {name:'Test Spiller 2', pin:'1002'},
-  {name:'Test Spiller 3', pin:'1003'},
-  {name:'Test Spiller 4', pin:'1004'},
-  {name:'Test Spiller 5', pin:'1005'}
+  {name:'Abdirisak', pin:'1001'},
+  {name:'Aksel BT', pin:'1002'},
+  {name:'Aksel EL', pin:'1003'},
+  {name:'Arnt Oddvar', pin:'1004'},
+  {name:'Even', pin:'1005'},
+  {name:'Fredrik', pin:'1006'},
+  {name:'Jesper', pin:'1007'},
+  {name:'Jo', pin:'1008'},
+  {name:'Johannes', pin:'1009'},
+  {name:'Jørgen', pin:'1010'},
+  {name:'Khalil', pin:'1011'},
+  {name:'Laurits', pin:'1012'},
+  {name:'Linus', pin:'1013'},
+  {name:'Markus', pin:'1014'},
+  {name:'Martin', pin:'1015'},
+  {name:'Nathaniel', pin:'1016'},
+  {name:'Nicolas', pin:'1017'},
+  {name:'Ole', pin:'1018'},
+  {name:'Pedro', pin:'1019'},
+  {name:'Robert', pin:'1020'},
+  {name:'Yamen', pin:'1021'},
+  {name:'Abdullah', pin:'1022'},
+  {name:'Adam', pin:'1023'},
+  {name:'Artin', pin:'1024'},
+  {name:'Bendik', pin:'1025'},
+  {name:'Gabriel', pin:'1026'},
+  {name:'Ishak', pin:'1027'},
+  {name:'Mikke', pin:'1028'},
+  {name:'Niklas', pin:'1029'},
+  {name:'Nikolai', pin:'1030'},
+  {name:'Noa', pin:'1031'},
+  {name:'Rebas', pin:'1032'},
+  {name:'Sverre', pin:'1033'},
+  {name:'Teo', pin:'1034'},
+  {name:'Theodor', pin:'1035'}
 ];
 
 const weeks = [
@@ -204,7 +234,7 @@ function activeWeekInfoText(){
 // Eksempel: const GOOGLE_SCRIPT_URL = '';
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbavm_eSXV7kRxQZ_GtY_Fiwf3V7pSH0QwEmdxgK1Uk0O4zBKI_XT63s1sFaVs5WgS/exec';
 const TRAINER_PIN = '2014';
-const TEAM_EXERCISE_GOAL = 300;
+const TEAM_EXERCISE_GOAL = 350;
 const BRONZE_EXERCISES = 10;
 const SILVER_EXERCISES = 20;
 const GOLD_EXERCISES = 30;
