@@ -232,8 +232,8 @@ function activeWeekInfoText(){
 
 // 1) Lim inn Google Apps Script Web App URL her etter oppsett.
 // Eksempel: const GOOGLE_SCRIPT_URL = '';
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbavm_eSXV7kRxQZ_GtY_Fiwf3V7pSH0QwEmdxgK1Uk0O4zBKI_XT63s1sFaVs5WgS/exec';
-const TRAINER_PIN = '2014';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYYuMSYiwLqqP2oSC_8SMCefYXNBs2FuyXAoCs2TwErU84kmVaUhu3xAl6_10xB_x5/exec';
+const TRAINER_PIN = '2015';
 const TEAM_EXERCISE_GOAL = 350;
 const BRONZE_EXERCISES = 10;
 const SILVER_EXERCISES = 20;
