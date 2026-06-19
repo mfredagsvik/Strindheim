@@ -33,8 +33,8 @@ const players = [
   {name:'Rebas', pin:'1032'},
   {name:'Sverre', pin:'1033'},
   {name:'Teo', pin:'1034'},
-  {name:'Theodor', pin:'1035'}
-  {name:'Mathias', pin:'1036'}
+  {name:'Theodor', pin:'1035'},
+  {name:'Mathias', pin:'1036'},
 ];
 
 const weeks = [
@@ -233,8 +233,8 @@ function activeWeekInfoText(){
 
 // 1) Lim inn Google Apps Script Web App URL her etter oppsett.
 // Eksempel: const GOOGLE_SCRIPT_URL = '';
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyYYuMSYiwLqqP2oSC_8SMCefYXNBs2FuyXAoCs2TwErU84kmVaUhu3xAl6_10xB_x5/exec';
-const TRAINER_PIN = '2015';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyRCFoKvjIYMcKpkG61sJMyLxyqNqhrG2lMbzNP5dEMyKbmVvpwvD8Tj1mmXt8Gar8-vg/exec';
+const TRAINER_PIN = '2014';
 const TEAM_EXERCISE_GOAL = 350;
 const BRONZE_EXERCISES = 10;
 const SILVER_EXERCISES = 20;
