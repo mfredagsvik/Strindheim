@@ -34,6 +34,7 @@ const players = [
   {name:'Sverre', pin:'1033'},
   {name:'Teo', pin:'1034'},
   {name:'Theodor', pin:'1035'}
+  {name:'Mathias', pin:'1036'}
 ];
 
 const weeks = [
